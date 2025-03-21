@@ -1,0 +1,14 @@
+{
+  "companyName": "My Awesome Company",
+  "location": "Anytown, Sweden",
+  "logo": "/src/assets/logo.png",
+  "slogan": "Your Catchy Slogan Here",
+  "description": "A brief description of your service and its benefits.",
+  "heroImage": "/src/assets/hero.png",
+  "link1Icon": "/src/assets/link1-icon.png",
+  "link2Icon": "/src/assets/link2-icon.png",
+  "link3Icon": "/src/assets/link3-icon.png",
+  "link4Icon": "/src/assets/link4-icon.png",
+  "link5Icon": "/src/assets/link5-icon.png",
+  "link6Icon": "/src/assets/link6-icon.png"
+}

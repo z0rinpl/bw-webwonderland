@@ -1,0 +1,86 @@
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2023 {{site.companyName}}. Located in {{site.location}}. Built with HTML, CSS, and JavaScript.</p>
+    <p>Company Details: We specialize in [your service].  We use [tools/technologies].</p>
+</div>
+</footer>
+
+<!-- Modal Container -->
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="modal-close">&times;</a>  <!-- Link to close the modal -->
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <h1 class="text-3xl font-semibold mb-4">Contact us</h1>
+                <p class="mb-4">We'd love to hear from you! Please fill out the form below.</p>
+
+                <form action="#" method="post" class="max-w-lg mx-auto">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 text-white border-gray-700">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email:</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 text-white border-gray-700">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message:</label>
+                        <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 text-white border-gray-700"></textarea>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Send
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <style>
+        /* CSS-Only Modal Styles */
+        .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none; /* Hidden by default */
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        }
+
+        .modal:target {
+        display: flex; /* Show the modal when targeted */
+        }
+
+        .modal-content {
+        background-color: #282828;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        max-width: 600px;
+        position: relative;
+        color: #FFFFFF;
+        }
+
+        .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #AAAAAA;
+        text-decoration: none;
+        font-size: 20px;
+        }
+
+        .modal-close:hover {
+        color: #FFFFFF;
+        }
+    </style>
+</div>
+
+<script src="/script.js"></script>

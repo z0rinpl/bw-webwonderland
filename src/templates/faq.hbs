@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{site.companyName}} - FAQ</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="font-sans">
+
+    {{> header }}
+
+    <!-- Main Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-semibold mb-4">FAQ</h1>
+            <p class="mb-8">Find answers to common questions about My Awesome Company and our services.</p>
+
+            <div class="faq-list">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <h2 class="text-xl font-semibold mb-2">What is My Awesome Company?</h2>
+                    <p>My Awesome Company is a [describe your company's type of business] that provides [mention your key services or products]. We are dedicated to [mention your company's mission or values].</p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <h2 class="text-xl font-semibold mb-2">How do I get started with My Awesome Company?</h2>
+                    <p>To get started, simply [provide clear instructions on how to get started]. You can also contact us for personalized assistance.</p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <h2 class="text-xl font-semibold mb-2">What are your pricing plans?</h2>
+                    <p>We offer a variety of pricing plans to meet your needs. You can find detailed information about our pricing on our [link to pricing page] or contact us for a custom quote.</p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <h2 class="text-xl font-semibold mb-2">What payment methods do you accept?</h2>
+                    <p>We accept [list accepted payment methods], as well as [mention any alternative payment options].</p>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <h2 class="text-xl font-semibold mb-2">How do I contact customer support?</h2>
+                    <p>You can contact our customer support team by [provide contact information, such as email address, phone number, or link to contact form]. We are available [mention support hours].</p>
+                </div>
+
+                <!-- Add more FAQ items here -->
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* FAQ Page Styles */
+.faq-list {
+display: flex;
+flex-direction: column;
+gap: 20px; /* Space between FAQ items */
+}
+
+.faq-list .faq-item {
+background-color: #282828;
+border-radius: 8px;
+padding: 20px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.faq-list .faq-item h2.text-xl.font-semibold.mb-2 {
+color: #FFFFFF;
+}
+
+.faq-list .faq-item p {
+color: #EEEEEE;
+line-height: 1.6;
+}
+    </style>
+
+    {{> footer }}
+
+</body>
+</html>

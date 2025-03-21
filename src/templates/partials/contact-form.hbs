@@ -1,0 +1,100 @@
+<style>
+    /* Contact Form Styles */
+    .text-gray-300 { /* Tailwind class, but we'll override */
+    color: #AAAAAA; /* Lighter gray for labels */
+    }
+
+    .bg-gray-800 { /* Tailwind class, but we'll override */
+    background-color: #e8e8e8; /* Darker background for input fields */
+    }
+
+    .border-gray-700 { /* Tailwind class, but we'll override */
+    border-color: #444444; /* Darker border for input fields */
+    }
+
+    .focus\:outline-none:focus { /* Tailwind class, but we'll override */
+    outline: none; /* Remove default outline on focus */
+    }
+
+    .focus\:shadow-outline:focus { /* Tailwind class, but we'll override */
+    box-shadow: 0 0 5px #C778DD; /* Add a purple glow on focus */
+    }
+
+    .bg-blue-500.hover\:bg-blue-700.text-white.font-bold.py-2.px-4.rounded.focus\:outline-none.focus\:shadow-outline { /* Tailwind classes, but we'll override */
+    /* Reusing the existing button style */
+    display: inline-block;
+    padding: 12px 24px;
+    /* Gradient Background */
+    background: linear-gradient(to right, #C778DD, #FF69B4); /* Purple to Pink */
+    color: #000000; /* Black text */
+    text-decoration: none;
+    border-radius: 50px; /* Pill-shaped */
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out; /* Subtle animation */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    font-size: 1.1em; /* Adjust as needed */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer */
+    }
+
+    .bg-blue-500.hover\:bg-blue-700.text-white.font-bold.py-2.px-4.rounded.focus\:outline-none.focus\:shadow-outline:hover { /* Tailwind classes, but we'll override */
+    transform: scale(1.05); /* Slightly larger on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    }
+</style>
+
+<section class="py-12">
+    <div class="container mx-auto px-4">
+        <h1 class="text-3xl font-semibold mb-4">Contact us</h1>
+        <p class="mb-4">We'd love to hear from you! Please fill out the form below.</p>
+
+        <form action="#" method="post" class="max-w-lg mx-auto">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
+                <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 text-white border-gray-700">
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email:</label>
+                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 text-white border-gray-700">
+            </div>
+
+            <div class="mb-4">
+                <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message:</label>
+                <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 text-white border-gray-700"></textarea>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Send
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const sendLink = document.querySelector('.flex a'); // Select the <a> tag
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const name = nameInput.value;
+        const email = emailInput.value;
+        const message = messageInput.value;
+
+        const subject = encodeURIComponent('Contact Form Submission');
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+        const mailtoLink = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+        sendLink.href = mailtoLink;
+
+        window.location.href = mailtoLink; // Open the email client
+    });
+});
+</script>

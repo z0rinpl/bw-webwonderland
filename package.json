@@ -1,0 +1,20 @@
+{
+  "name": "cybertomb-poc",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/templates/*.hbs --dist-dir dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@marcotss/parcel-transformer-handlebars-json": "^1.0.0",
+    "handlebars": "^4.7.8",
+    "parcel": "^2.14.1"
+  },
+  "devDependencies": {
+    "@parcel/resolver-glob": "^2.14.1"
+  }
+}

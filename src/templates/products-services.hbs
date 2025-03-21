@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{site.companyName}} - Products</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="font-sans">
+
+    {{> header }}
+
+    <!-- Main Content -->
+    <section class="py-12">
+        <h1 class="text-3xl font-semibold mb-4">Products & Services</h1>
+        <p class="mb-8">Explore our range of products and services designed to meet your needs.</p>
+
+        <div class="products-list">
+            <!-- Product/Service Item 1 -->
+            <div class="product-item">
+                <img src="{{site.link5Icon}}" alt="Product 1" class="product-image">
+                <div class="product-description">
+                    <h2 class="text-xl font-semibold mb-2">Product/Service Name 1</h2>
+                    <p>A concise description of the product or service. Highlight its key features and benefits. Explain how it works and why it's a great choice. Include some other relevant details.</p>
+                    <p>More details about the product or service can go here. You can add multiple paragraphs to provide a comprehensive overview.</p>
+                </div>
+            </div>
+
+            <!-- Product/Service Item 2 -->
+            <div class="product-item">
+                <img src="{{site.link6Icon}}" alt="Product 2" class="product-image">
+                <div class="product-description">
+                    <h2 class="text-xl font-semibold mb-2">Product/Service Name 2</h2>
+                    <p>A concise description of the product or service. Highlight its key features and benefits. Explain how it works and why it's a great choice. Include some other relevant details.</p>
+                    <p>More details about the product or service can go here. You can add multiple paragraphs to provide a comprehensive overview.</p>
+                </div>
+            </div>
+
+            <!-- Add more product/service items here -->
+        </div>
+    </section>
+
+    <style>
+/* Products & Services Page Styles (Matching Referral Styling) */
+.products-list { /* Targeting the container */
+display: flex;
+flex-direction: column; /* Stack items vertically */
+gap: 30px; /* Space between items */
+padding: 2rem;
+}
+
+.products-list .product-item { /* Targeting each item */
+display: flex; /* Image and description side-by-side */
+align-items: flex-start; /* Align items to the top */
+background-color: #282828; /* Dark background for the item */
+border-radius: 8px;
+padding: 20px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.products-list .product-item img.product-image { /* Targeting the image */
+width: 20%; /* Image takes up 20% of the width */
+max-width: 150px; /* Limit the maximum image width */
+height: auto; /* Maintain aspect ratio */
+border-radius: 4px;
+margin-right: 20px; /* Space between image and description */
+object-fit: cover; /* Ensure the image fills the container without distortion */
+}
+
+.products-list .product-item .product-description { /* Targeting the description */
+width: 80%; /* Description takes up 80% of the width */
+color: #EEEEEE;
+}
+
+.products-list .product-item .product-description h2.text-xl.font-semibold.mb-2 { /* Targeting the heading */
+font-size: 1.5em;
+margin-bottom: 10px;
+color: #FFFFFF;
+}
+
+.products-list .product-item .product-description p { /* Targeting the paragraphs */
+font-size: 1em;
+line-height: 1.6; /* Improve readability */
+}
+    </style>
+
+    {{> footer }}
+
+</body>
+</html>

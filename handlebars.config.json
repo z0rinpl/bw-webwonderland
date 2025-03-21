@@ -1,0 +1,7 @@
+{
+  "data": "src/data",
+  "decorators": "src",
+  "helpers": "src",
+  "layouts": "src",
+  "partials": "src/templates/partials"
+}
