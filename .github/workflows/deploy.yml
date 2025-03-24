@@ -25,10 +25,7 @@ jobs:
         run: npx parcel build "src/**/*.{html,hbs}" --dist-dir dist
 
       - name: Deploy to GitHub Pages
-        # uses: peaceiris/actions-gh-pages@v3
-        run: |
-          pwd
-          ls -la ./dist
-        # with:
-        #   github_token: ${{ secrets.GITHUB_TOKEN }}
-        #   publish_dir: dist
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
